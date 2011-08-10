@@ -1,0 +1,3 @@
+%h2 New Post
+%form#new-post-form{:method => 'post', :action => '/posts', :'accept-charset' => 'utf-8'}
+  = haml :'posts/post_form', :locals => { :post => @post }

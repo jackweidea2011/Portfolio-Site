@@ -1,0 +1,8 @@
+- if signed_in?
+	%a{:href => '/posts/new'} New blog post
+
+%h2 All Posts
+%section.posts
+	- if @posts
+		- @posts.each do |post|
+			= haml :'posts/post', :locals => { :post => post }

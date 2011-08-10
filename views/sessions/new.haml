@@ -1,0 +1,12 @@
+%form.login-form(method='post' action='/sessions' accept-charset='utf-8')
+  %ul
+    %li
+      %label(for="user_email") Email address
+    %li
+      %input(id="user_email" type="text" value="" size="30" name="user[email]")
+    %li
+      %label(for="user_password") Password
+    %li
+      %input(id="user_password" type="password" value="" size="30" name="user[password]")
+    %li
+      %input(id="user_submit" type="submit" value="Log in" name="commit")

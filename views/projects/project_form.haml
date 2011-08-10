@@ -1,0 +1,20 @@
+%ul
+  %input{:id => 'project_user_id', :type => 'hidden', :value => "#{project.user_id}", :name => 'project[user_id]'}
+  %li
+    %label{:for => 'project_name'} Name
+  %li
+    %input{:id => 'project_name', :type => 'text', :value => "#{project.name}", :size => '60', :name => 'project[name]'}
+  %li
+    %label{:for => 'project_description'} Description
+  %li
+    %input{:id => 'project_description', :type => 'text', :value => "#{project.description}", :size => 60, :name => 'project[description]'}
+  %li
+    %label{:for => 'project_image_url'} Image URL
+  %li
+    %input{:id => 'project_image_url', :type => 'text', :value => "#{project.image_url}", :size => '60', :name => 'project[image_url]'}
+  %li
+    %label{:for => 'project_project_url'} Project URL
+  %li
+    %input{:id => 'project_project_url', :type => 'text', :value => "#{project.project_url}", :size => '60', :name => 'project[project_url]'}
+  %li
+    %input{:id => 'project_submit', :type => 'submit', :value => 'Submit', :name => 'commit'}

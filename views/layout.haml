@@ -1,0 +1,21 @@
+!!!
+%html
+	%head
+		%title
+			= @title
+		%link{ :type => 'text/css', :rel => 'stylesheet', :href => '/stylesheets/base.css' }
+    
+	%body
+		#centre  
+			= haml :header
+			#flash
+				%p.notice
+					= @flash[:notice]
+				%p.success
+					= @flash[:success]
+				%p.alert
+					= @flash[:alert]
+
+			#main
+				= yield
+			= haml :footer

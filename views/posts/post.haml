@@ -1,0 +1,19 @@
+%article.post
+	#full-post.box
+		%h3
+			%a{:href => "/post/#{post.id}"}
+				= post.title
+		%p
+			.post-text
+				= post.content	
+		%p
+			.post-text
+				= "Posted by #{post.author} on #{post.date_created.to_date.to_s}"
+		- if signed_in? && post.author == current_user.email
+			%a(href="/post/#{post.id}/edit") Edit
+
+			%form.delete-post-form{:method => 'post', :action => "/post/#{post.id}"}
+				%input{:type => 'hidden',  :name => '_method', :value => 'delete' }
+				%input{:id => 'delete_submit', :type => 'submit', :value => 'Delete', :name => 'commit'}
+		#comments-box
+			

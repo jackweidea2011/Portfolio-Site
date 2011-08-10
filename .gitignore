@@ -1,0 +1,4 @@
+.sass-cache
+doc/*
+db/*
+log/*

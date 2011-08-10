@@ -1,0 +1,12 @@
+%ul
+  %input{:id => 'post_user_id', :type => 'hidden', :value => "#{post.user_id}", :name => 'post[user_id]'}
+  %li
+    %label{:for => 'post_title'} Title
+  %li
+    %input{:id => 'post_title', :type => 'text', :value => "#{post.title}", :size => '60', :name => 'post[title]'}
+  %li
+    %label{:for => 'post_content'} Content
+  %li
+    %input{:id => 'post_content', :type => 'text', :value => "#{post.content}", :size => 60, :name => 'post[content]'}
+  %li
+    %input{:id => 'post_submit', :type => 'submit', :value => 'Submit', :name => 'commit'}

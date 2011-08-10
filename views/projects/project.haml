@@ -1,0 +1,26 @@
+%article.project
+	#full-project.box
+		%h3
+			%a{:href => "/project/#{project.id}"} 
+				.post-text
+					= project.name
+
+		%img{:src => project.image_url, :alt => "#{project.name} Project image"}
+		%p
+			.post-text
+				= project.description
+    
+		- if project.project_url
+			%a{:href => "#{project.project_url}"}
+				= project.project_url
+		%p
+			.post-text
+				= "Created on #{project.date_created.to_date.to_s}"
+  
+		- if signed_in? && project.user_id == current_user.id
+			%a(href="/project/#{project.id}/edit") Edit
+    
+			%form.delete-project-form{:method => 'post', :action => "/project/#{project.id}"}
+				%input{:type => 'hidden',  :name => '_method', :value => 'delete' }
+				%input{:id => 'delete_submit', :type => 'submit', :value => 'Delete', :name => 'commit'}
+				

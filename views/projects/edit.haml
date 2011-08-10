@@ -1,0 +1,4 @@
+%h2 Edit Project
+%form#edit-project-form{:method => 'post', :action => "/project/#{@project.id}", :'accept-charset' => 'utf-8'}
+	%input{:type => 'hidden', :name => '_method', :value => 'put'}
+	= haml :'projects/project_form', :locals => { :project => @project }

@@ -1,0 +1,8 @@
+- if signed_in?
+  %a{:href => '/projects/new'} New project
+
+%h2 All Projects
+%section.projects
+  - if @projects
+    - @projects.each do |project|
+      = haml :'projects/project', :locals => { :project => project }

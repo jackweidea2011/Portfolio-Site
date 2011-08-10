@@ -1,0 +1,1 @@
+DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/blog.db")
