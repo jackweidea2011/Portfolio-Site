@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'PCMagazineFontRegular';
-    src: url('pc_magazine_font-webfont.eot');
-    src: local('☺'), url('pc_magazine_font-webfont.woff') format('woff'), url('pc_magazine_font-webfont.ttf') format('truetype'), url('pc_magazine_font-webfont.svg#PCMagazineFontRegular') format('svg');
+    src: url('/fonts/pc_magazine_font-webfont.eot');
+    src: url('/fonts/pc_magazine_font-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/pc_magazine_font-webfont.woff') format('woff'),
+		 url('/fonts/pc_magazine_font-webfont.ttf') format('truetype'), 
+		 url('/fonts/pc_magazine_font-webfont.svg#PCMagazineFontRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -83,7 +86,7 @@ header #logn { text-align: center; }
 header h1 {  
 text-align:center; 
 color: #00C768; 
-font:90px 'PCMagazineFontRegular';
+font:90px 'PCMagazineFontRegular', 'PlayRegular';
 letter-spacing: 0;
 text-shadow: 2px 2px 2px #636469;
 }
