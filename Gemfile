@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'haml'
+gem 'sass'
 gem 'dm-sqlite-adapter'
 gem 'data_mapper'
 gem 'heroku'
